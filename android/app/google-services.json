@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "41724302834",
+    "project_id": "pixel-96472",
+    "storage_bucket": "pixel-96472.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41724302834:android:4e56dbb3d34e2fcf27476b",
+        "android_client_info": {
+          "package_name": "com.example.pixel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41724302834-5tmv4c9h189gfrksd1hbkim8tfei78eu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmYxE8V-9J7T-JOwxbhbuU9Z0HL_TAb0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41724302834-5tmv4c9h189gfrksd1hbkim8tfei78eu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

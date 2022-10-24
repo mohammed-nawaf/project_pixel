@@ -39,7 +39,7 @@ class PreviewCard extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(20),
           child: const Text(
-            '#Nature #Mountain',
+            '#Awsome #Cute',
             style: TextStyle(fontSize: 18, color: Colors.blue),
           ),
         ),

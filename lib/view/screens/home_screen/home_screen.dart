@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:pixel/data/api_services.dart';
 import 'package:pixel/models/posts_model/posts_model.dart';
-import 'package:pixel/models/user_model/user_model.dart';
-import 'package:pixel/view/screens/error_screen/error_sreen.dart';
 
 import 'package:pixel/view/screens/home_screen/widgets/post_card.dart';
 import 'package:pixel/view/screens/home_screen/widgets/share_snap_custom_widget.dart';
 import 'package:pixel/view/screens/home_screen/widgets/tabar_custom_widget.dart';
 import 'package:pixel/view/screens/user_profile_screen/user_profile_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   // @override
   // void initState() {
   //   ApiCalls.instance.getUser();
@@ -84,10 +77,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                         profilePicture: user[index].picture!),
                                   ));
                                 },
-                                child: CircleAvatar(
-                                    radius: 25,
-                                    backgroundImage:
-                                        NetworkImage(user![index].picture!)),
+                                child: Container(
+                                  decoration: BoxDecoration(shape: BoxShape.circle),
+                                  child: Image(
+                                      image:
+                                          NetworkImage(user![index].picture!)),
+                                ),
+                                // child: CircleAvatar(
+                                //     radius: 25,
+                                //     backgroundImage:
+                                //         NetworkImage(user![index].picture!)),
                               );
                             },
                             itemCount: 1,

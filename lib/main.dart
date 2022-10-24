@@ -1,13 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:pixel/view/screens/create_account_screen/create_account_screen.dart';
-import 'package:pixel/view/screens/home_screen/home_screen.dart';
-import 'package:pixel/view/screens/profile_setup_screens/complete_profile_splash_screen.dart';
-
+import 'package:pixel/firebase_options.dart';
 import 'package:pixel/view/screens/splash_screen/splash_screen.dart';
-import 'package:pixel/view/screens/user_profile_screen/user_profile_screen.dart';
 
-void main() {
+void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(const MyApp());
 }
 
