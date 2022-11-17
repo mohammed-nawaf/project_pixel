@@ -68,26 +68,31 @@ class HomeScreen extends StatelessWidget {
                             shrinkWrap: true,
                             itemBuilder: (context, index) {
                               return GestureDetector(
-                                onTap: () {
-                                  final name =
-                                      '${user[index].firstName!} ${user[index].lastName!}';
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => UserProfileScreen(
-                                        profileName: name,
-                                        profilePicture: user[index].picture!),
+                                  onTap: () {
+                                    final name =
+                                        '${user[index].firstName!} ${user[index].lastName!}';
+                                    Navigator.of(context)
+                                        .push(MaterialPageRoute(
+                                      builder: (context) => UserProfileScreen(
+                                          profileName: name,
+                                          profilePicture: user[index].picture!),
+                                    ));
+                                  },
+                                  child: Container(
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                            image: NetworkImage(
+                                              user![index].picture!,
+                                            ),
+                                            fit: BoxFit.cover)),
+
+                                    // child: CircleAvatar(
+                                    //     radius: 25,
+                                    //     backgroundImage:
+                                    //         NetworkImage(user![index].picture!)),
                                   ));
-                                },
-                                child: Container(
-                                  decoration: BoxDecoration(shape: BoxShape.circle),
-                                  child: Image(
-                                      image:
-                                          NetworkImage(user![index].picture!)),
-                                ),
-                                // child: CircleAvatar(
-                                //     radius: 25,
-                                //     backgroundImage:
-                                //         NetworkImage(user![index].picture!)),
-                              );
                             },
                             itemCount: 1,
                           ),

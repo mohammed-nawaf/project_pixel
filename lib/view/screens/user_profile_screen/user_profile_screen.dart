@@ -19,6 +19,13 @@ class UserProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.teal[50],
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(Icons.arrow_back_ios_new),
+          color: Colors.black,
+        ),
         elevation: 0,
         backgroundColor: Colors.teal[50],
         actions: const [
